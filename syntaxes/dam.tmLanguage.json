@@ -1,0 +1,59 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Damus",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#numbers"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+				"name": "keyword.control.dam",
+				"match": "\\b(if|while|repeat|set|error)\\b"
+			},
+			{
+				"name" :"entity.name.class",
+				"match": "\\b(require|fields|main)\\b"
+			},
+			{
+				"name":"entity.name.function",
+				"match": "\\b(debug|quit|call)\\b"
+			},{
+				"name":"variable",
+				"match": "[a-zA-Z_]+"
+			},{
+				"name":"comment.line",
+				"match": "(/\\*([^*]|[\r\n]|(\\*+([^*/]|[\r\n])))*\\*+/)|(//.*)"
+			}
+			]
+		},
+		"numbers":{
+			"patterns": [
+				{
+					"name":"constant.numeric",
+					"match": "[0-9]+"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.dam",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.dam",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.dam"
+}

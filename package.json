@@ -1,0 +1,25 @@
+{
+  "name": "damus",
+  "displayName": "Damus",
+  "description": "simple python interpreted language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.73.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "dam",
+      "aliases": ["Damus", "dam"],
+      "extensions": ["dam"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "dam",
+      "scopeName": "source.dam",
+      "path": "./syntaxes/dam.tmLanguage.json"
+    }]
+  }
+}
